@@ -29,10 +29,18 @@ public class FriendHoverable : MonoBehaviour, IHoverable
                 renderer.material.EnableKeyword("_EMISSION");
         }
     }
-
+    public void OnHoverStay()
+    {
+        if (!friend.isSelected) CursorManager.instance.SetCursor("Pointer");
+        else CursorManager.instance.SetCursor("Arrow");
+    }
     public void OnHoverExit()
     {
         foreach (var renderer in renderers)
             renderer.material.DisableKeyword("_EMISSION");
+
+        if (!ClickManager.instance.cursorIsLoading
+            && !CursorModeManager.instance.enableMultiSelect)
+            CursorManager.instance.SetCursor("Arrow");
     }
 }

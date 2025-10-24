@@ -28,13 +28,13 @@ public class FriendSelectable : MonoBehaviour, ISelectable
     {
         friend.isSelected = true;
         friendHoverable.OnHoverExit();
-        MovementManager.instance.AddToMovementList(friendMovement);
+        FriendSelectionManager.instance.AddToSelectedFriendsList(this.gameObject);
         selectSpotlight.SetActive(true);
     }
     public void OnDeselect()
     {
         friend.isSelected = false;
-        MovementManager.instance.RemoveFromMovementList(friendMovement);
+        FriendSelectionManager.instance.RemoveFromSelectedFriendsList(this.gameObject);
         selectSpotlight.SetActive(false);   
     }
 }

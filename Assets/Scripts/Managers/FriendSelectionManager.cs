@@ -27,16 +27,36 @@ public class FriendSelectionManager : MonoBehaviour
         UnselectAllFriends();
         EnableFriend(friend);
     }
+    public void MultiSelect(GameObject friend)
+    {
+        if (!selectedFriends.Contains(friend))
+            EnableFriend(friend);
+    }
     public void UnselectAllFriends()
     {
-        foreach (var selectedFriend in selectedFriends)
+        foreach (var selectedFriend in new List<GameObject>(selectedFriends))
             selectedFriend.GetComponent<FriendSelectable>().OnDeselect();   
 
         selectedFriends.Clear();    
     }
+    public void AddToSelectedFriendsList(GameObject friend)
+    {
+        if (!selectedFriends.Contains(friend))
+        {
+            selectedFriends.Add(friend);
+            MovementManager.instance.friendMovements.Add(friend.GetComponent<FriendMovement>());
+        }
+    }
+    public void RemoveFromSelectedFriendsList(GameObject friend)
+    {
+        if (selectedFriends.Contains(friend))
+        {
+            selectedFriends.Remove(friend);
+            MovementManager.instance.friendMovements.Remove(friend.GetComponent<FriendMovement>());
+        }
+    }
     private void EnableFriend(GameObject friend)
     {
-        selectedFriends.Add(friend);
         friend.GetComponent<FriendSelectable>().OnSelect();
     }
 }

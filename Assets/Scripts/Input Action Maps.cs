@@ -24,6 +24,94 @@ public partial class @InputActionMaps: IInputActionCollection2, IDisposable
     ""name"": ""Input Action Maps"",
     ""maps"": [
         {
+            ""name"": ""Cursor"",
+            ""id"": ""7880bac8-8a3a-4364-b0fa-529350bb487f"",
+            ""actions"": [
+                {
+                    ""name"": ""Select"",
+                    ""type"": ""Button"",
+                    ""id"": ""eface59d-687e-40cd-8311-aaa573da1ff2"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Unselect"",
+                    ""type"": ""Button"",
+                    ""id"": ""93e3c881-17d7-4cf7-90aa-28f745086074"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Drag"",
+                    ""type"": ""Button"",
+                    ""id"": ""e1836828-d567-459b-8efa-c78e670864c8"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Scroll"",
+                    ""type"": ""Value"",
+                    ""id"": ""ec1b7488-00cd-41ab-8e9f-adb0bac4f6fa"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""d81947cf-e338-4a45-9b05-7dff6448b093"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Mouse"",
+                    ""action"": ""Select"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""daa5675d-23bb-4949-8583-778cfd7b8aed"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Unselect"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""483c31a5-44ab-4d8a-97c6-4920dc514524"",
+                    ""path"": ""<Mouse>/middleButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Drag"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b6644196-d230-4a95-b8fc-cde295f6e187"",
+                    ""path"": ""<Mouse>/scroll"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Scroll"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
             ""name"": ""Camera"",
             ""id"": ""b0469837-5996-4bc5-927a-eef931d7c741"",
             ""actions"": [
@@ -35,15 +123,6 @@ public partial class @InputActionMaps: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""Drag"",
-                    ""type"": ""Button"",
-                    ""id"": ""0e6f01ec-6573-424b-8a52-a8cdbdbd7f57"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
                 },
                 {
                     ""name"": ""Rotate Left"",
@@ -71,15 +150,6 @@ public partial class @InputActionMaps: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Scroll"",
-                    ""type"": ""Value"",
-                    ""id"": ""4b3bf5f5-9f3a-43e4-8be2-31476acbac16"",
-                    ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
                 },
                 {
                     ""name"": ""Tilt Down"",
@@ -167,17 +237,6 @@ public partial class @InputActionMaps: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""9c4fd7ce-f184-4fbf-b9c4-6703707dcf5d"",
-                    ""path"": ""<Mouse>/middleButton"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Mouse"",
-                    ""action"": ""Drag"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""195e94ea-1410-45d8-b88b-6f56ad7cccb0"",
                     ""path"": ""<Keyboard>/q"",
                     ""interactions"": """",
@@ -206,17 +265,6 @@ public partial class @InputActionMaps: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Keyboard "",
                     ""action"": ""Reset Rotation"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""7e09f2b6-fb07-4241-b5dc-d5acc1daf870"",
-                    ""path"": ""<Mouse>/scroll"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Mouse"",
-                    ""action"": ""Scroll"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -254,6 +302,54 @@ public partial class @InputActionMaps: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Friend"",
+            ""id"": ""9d1088ea-579a-4f4b-9ae3-be8edc839519"",
+            ""actions"": [
+                {
+                    ""name"": ""Select"",
+                    ""type"": ""Button"",
+                    ""id"": ""203d6205-9a39-4e31-9b88-927440bd736d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Multi Select"",
+                    ""type"": ""Button"",
+                    ""id"": ""207d0eb3-3da7-4b24-af1e-b2ed29f0ea1a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""a6b54097-6e3d-4c4a-bd6b-dcff0adad264"",
+                    ""path"": ""<Keyboard>/shift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard "",
+                    ""action"": ""Multi Select"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8e1221c6-f70e-4e9f-a455-ed6bd3007877"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Mouse"",
+                    ""action"": ""Select"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -269,17 +365,25 @@ public partial class @InputActionMaps: IInputActionCollection2, IDisposable
         }
     ]
 }");
+        // Cursor
+        m_Cursor = asset.FindActionMap("Cursor", throwIfNotFound: true);
+        m_Cursor_Select = m_Cursor.FindAction("Select", throwIfNotFound: true);
+        m_Cursor_Unselect = m_Cursor.FindAction("Unselect", throwIfNotFound: true);
+        m_Cursor_Drag = m_Cursor.FindAction("Drag", throwIfNotFound: true);
+        m_Cursor_Scroll = m_Cursor.FindAction("Scroll", throwIfNotFound: true);
         // Camera
         m_Camera = asset.FindActionMap("Camera", throwIfNotFound: true);
         m_Camera_Movement = m_Camera.FindAction("Movement", throwIfNotFound: true);
-        m_Camera_Drag = m_Camera.FindAction("Drag", throwIfNotFound: true);
         m_Camera_RotateLeft = m_Camera.FindAction("Rotate Left", throwIfNotFound: true);
         m_Camera_RotateRight = m_Camera.FindAction("Rotate Right", throwIfNotFound: true);
         m_Camera_ResetRotation = m_Camera.FindAction("Reset Rotation", throwIfNotFound: true);
-        m_Camera_Scroll = m_Camera.FindAction("Scroll", throwIfNotFound: true);
         m_Camera_TiltDown = m_Camera.FindAction("Tilt Down", throwIfNotFound: true);
         m_Camera_TiltUp = m_Camera.FindAction("Tilt Up", throwIfNotFound: true);
         m_Camera_ResetTilt = m_Camera.FindAction("Reset Tilt", throwIfNotFound: true);
+        // Friend
+        m_Friend = asset.FindActionMap("Friend", throwIfNotFound: true);
+        m_Friend_Select = m_Friend.FindAction("Select", throwIfNotFound: true);
+        m_Friend_MultiSelect = m_Friend.FindAction("Multi Select", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -338,15 +442,83 @@ public partial class @InputActionMaps: IInputActionCollection2, IDisposable
         return asset.FindBinding(bindingMask, out action);
     }
 
+    // Cursor
+    private readonly InputActionMap m_Cursor;
+    private List<ICursorActions> m_CursorActionsCallbackInterfaces = new List<ICursorActions>();
+    private readonly InputAction m_Cursor_Select;
+    private readonly InputAction m_Cursor_Unselect;
+    private readonly InputAction m_Cursor_Drag;
+    private readonly InputAction m_Cursor_Scroll;
+    public struct CursorActions
+    {
+        private @InputActionMaps m_Wrapper;
+        public CursorActions(@InputActionMaps wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Select => m_Wrapper.m_Cursor_Select;
+        public InputAction @Unselect => m_Wrapper.m_Cursor_Unselect;
+        public InputAction @Drag => m_Wrapper.m_Cursor_Drag;
+        public InputAction @Scroll => m_Wrapper.m_Cursor_Scroll;
+        public InputActionMap Get() { return m_Wrapper.m_Cursor; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(CursorActions set) { return set.Get(); }
+        public void AddCallbacks(ICursorActions instance)
+        {
+            if (instance == null || m_Wrapper.m_CursorActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_CursorActionsCallbackInterfaces.Add(instance);
+            @Select.started += instance.OnSelect;
+            @Select.performed += instance.OnSelect;
+            @Select.canceled += instance.OnSelect;
+            @Unselect.started += instance.OnUnselect;
+            @Unselect.performed += instance.OnUnselect;
+            @Unselect.canceled += instance.OnUnselect;
+            @Drag.started += instance.OnDrag;
+            @Drag.performed += instance.OnDrag;
+            @Drag.canceled += instance.OnDrag;
+            @Scroll.started += instance.OnScroll;
+            @Scroll.performed += instance.OnScroll;
+            @Scroll.canceled += instance.OnScroll;
+        }
+
+        private void UnregisterCallbacks(ICursorActions instance)
+        {
+            @Select.started -= instance.OnSelect;
+            @Select.performed -= instance.OnSelect;
+            @Select.canceled -= instance.OnSelect;
+            @Unselect.started -= instance.OnUnselect;
+            @Unselect.performed -= instance.OnUnselect;
+            @Unselect.canceled -= instance.OnUnselect;
+            @Drag.started -= instance.OnDrag;
+            @Drag.performed -= instance.OnDrag;
+            @Drag.canceled -= instance.OnDrag;
+            @Scroll.started -= instance.OnScroll;
+            @Scroll.performed -= instance.OnScroll;
+            @Scroll.canceled -= instance.OnScroll;
+        }
+
+        public void RemoveCallbacks(ICursorActions instance)
+        {
+            if (m_Wrapper.m_CursorActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(ICursorActions instance)
+        {
+            foreach (var item in m_Wrapper.m_CursorActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_CursorActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public CursorActions @Cursor => new CursorActions(this);
+
     // Camera
     private readonly InputActionMap m_Camera;
     private List<ICameraActions> m_CameraActionsCallbackInterfaces = new List<ICameraActions>();
     private readonly InputAction m_Camera_Movement;
-    private readonly InputAction m_Camera_Drag;
     private readonly InputAction m_Camera_RotateLeft;
     private readonly InputAction m_Camera_RotateRight;
     private readonly InputAction m_Camera_ResetRotation;
-    private readonly InputAction m_Camera_Scroll;
     private readonly InputAction m_Camera_TiltDown;
     private readonly InputAction m_Camera_TiltUp;
     private readonly InputAction m_Camera_ResetTilt;
@@ -355,11 +527,9 @@ public partial class @InputActionMaps: IInputActionCollection2, IDisposable
         private @InputActionMaps m_Wrapper;
         public CameraActions(@InputActionMaps wrapper) { m_Wrapper = wrapper; }
         public InputAction @Movement => m_Wrapper.m_Camera_Movement;
-        public InputAction @Drag => m_Wrapper.m_Camera_Drag;
         public InputAction @RotateLeft => m_Wrapper.m_Camera_RotateLeft;
         public InputAction @RotateRight => m_Wrapper.m_Camera_RotateRight;
         public InputAction @ResetRotation => m_Wrapper.m_Camera_ResetRotation;
-        public InputAction @Scroll => m_Wrapper.m_Camera_Scroll;
         public InputAction @TiltDown => m_Wrapper.m_Camera_TiltDown;
         public InputAction @TiltUp => m_Wrapper.m_Camera_TiltUp;
         public InputAction @ResetTilt => m_Wrapper.m_Camera_ResetTilt;
@@ -375,9 +545,6 @@ public partial class @InputActionMaps: IInputActionCollection2, IDisposable
             @Movement.started += instance.OnMovement;
             @Movement.performed += instance.OnMovement;
             @Movement.canceled += instance.OnMovement;
-            @Drag.started += instance.OnDrag;
-            @Drag.performed += instance.OnDrag;
-            @Drag.canceled += instance.OnDrag;
             @RotateLeft.started += instance.OnRotateLeft;
             @RotateLeft.performed += instance.OnRotateLeft;
             @RotateLeft.canceled += instance.OnRotateLeft;
@@ -387,9 +554,6 @@ public partial class @InputActionMaps: IInputActionCollection2, IDisposable
             @ResetRotation.started += instance.OnResetRotation;
             @ResetRotation.performed += instance.OnResetRotation;
             @ResetRotation.canceled += instance.OnResetRotation;
-            @Scroll.started += instance.OnScroll;
-            @Scroll.performed += instance.OnScroll;
-            @Scroll.canceled += instance.OnScroll;
             @TiltDown.started += instance.OnTiltDown;
             @TiltDown.performed += instance.OnTiltDown;
             @TiltDown.canceled += instance.OnTiltDown;
@@ -406,9 +570,6 @@ public partial class @InputActionMaps: IInputActionCollection2, IDisposable
             @Movement.started -= instance.OnMovement;
             @Movement.performed -= instance.OnMovement;
             @Movement.canceled -= instance.OnMovement;
-            @Drag.started -= instance.OnDrag;
-            @Drag.performed -= instance.OnDrag;
-            @Drag.canceled -= instance.OnDrag;
             @RotateLeft.started -= instance.OnRotateLeft;
             @RotateLeft.performed -= instance.OnRotateLeft;
             @RotateLeft.canceled -= instance.OnRotateLeft;
@@ -418,9 +579,6 @@ public partial class @InputActionMaps: IInputActionCollection2, IDisposable
             @ResetRotation.started -= instance.OnResetRotation;
             @ResetRotation.performed -= instance.OnResetRotation;
             @ResetRotation.canceled -= instance.OnResetRotation;
-            @Scroll.started -= instance.OnScroll;
-            @Scroll.performed -= instance.OnScroll;
-            @Scroll.canceled -= instance.OnScroll;
             @TiltDown.started -= instance.OnTiltDown;
             @TiltDown.performed -= instance.OnTiltDown;
             @TiltDown.canceled -= instance.OnTiltDown;
@@ -447,6 +605,60 @@ public partial class @InputActionMaps: IInputActionCollection2, IDisposable
         }
     }
     public CameraActions @Camera => new CameraActions(this);
+
+    // Friend
+    private readonly InputActionMap m_Friend;
+    private List<IFriendActions> m_FriendActionsCallbackInterfaces = new List<IFriendActions>();
+    private readonly InputAction m_Friend_Select;
+    private readonly InputAction m_Friend_MultiSelect;
+    public struct FriendActions
+    {
+        private @InputActionMaps m_Wrapper;
+        public FriendActions(@InputActionMaps wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Select => m_Wrapper.m_Friend_Select;
+        public InputAction @MultiSelect => m_Wrapper.m_Friend_MultiSelect;
+        public InputActionMap Get() { return m_Wrapper.m_Friend; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(FriendActions set) { return set.Get(); }
+        public void AddCallbacks(IFriendActions instance)
+        {
+            if (instance == null || m_Wrapper.m_FriendActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_FriendActionsCallbackInterfaces.Add(instance);
+            @Select.started += instance.OnSelect;
+            @Select.performed += instance.OnSelect;
+            @Select.canceled += instance.OnSelect;
+            @MultiSelect.started += instance.OnMultiSelect;
+            @MultiSelect.performed += instance.OnMultiSelect;
+            @MultiSelect.canceled += instance.OnMultiSelect;
+        }
+
+        private void UnregisterCallbacks(IFriendActions instance)
+        {
+            @Select.started -= instance.OnSelect;
+            @Select.performed -= instance.OnSelect;
+            @Select.canceled -= instance.OnSelect;
+            @MultiSelect.started -= instance.OnMultiSelect;
+            @MultiSelect.performed -= instance.OnMultiSelect;
+            @MultiSelect.canceled -= instance.OnMultiSelect;
+        }
+
+        public void RemoveCallbacks(IFriendActions instance)
+        {
+            if (m_Wrapper.m_FriendActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IFriendActions instance)
+        {
+            foreach (var item in m_Wrapper.m_FriendActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_FriendActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public FriendActions @Friend => new FriendActions(this);
     private int m_KeyboardSchemeIndex = -1;
     public InputControlScheme KeyboardScheme
     {
@@ -465,16 +677,26 @@ public partial class @InputActionMaps: IInputActionCollection2, IDisposable
             return asset.controlSchemes[m_MouseSchemeIndex];
         }
     }
+    public interface ICursorActions
+    {
+        void OnSelect(InputAction.CallbackContext context);
+        void OnUnselect(InputAction.CallbackContext context);
+        void OnDrag(InputAction.CallbackContext context);
+        void OnScroll(InputAction.CallbackContext context);
+    }
     public interface ICameraActions
     {
         void OnMovement(InputAction.CallbackContext context);
-        void OnDrag(InputAction.CallbackContext context);
         void OnRotateLeft(InputAction.CallbackContext context);
         void OnRotateRight(InputAction.CallbackContext context);
         void OnResetRotation(InputAction.CallbackContext context);
-        void OnScroll(InputAction.CallbackContext context);
         void OnTiltDown(InputAction.CallbackContext context);
         void OnTiltUp(InputAction.CallbackContext context);
         void OnResetTilt(InputAction.CallbackContext context);
+    }
+    public interface IFriendActions
+    {
+        void OnSelect(InputAction.CallbackContext context);
+        void OnMultiSelect(InputAction.CallbackContext context);
     }
 }

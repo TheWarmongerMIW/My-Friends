@@ -2,6 +2,94 @@
     "name": "Input Action Maps",
     "maps": [
         {
+            "name": "Cursor",
+            "id": "7880bac8-8a3a-4364-b0fa-529350bb487f",
+            "actions": [
+                {
+                    "name": "Select",
+                    "type": "Button",
+                    "id": "eface59d-687e-40cd-8311-aaa573da1ff2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Unselect",
+                    "type": "Button",
+                    "id": "93e3c881-17d7-4cf7-90aa-28f745086074",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Drag",
+                    "type": "Button",
+                    "id": "e1836828-d567-459b-8efa-c78e670864c8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Scroll",
+                    "type": "Value",
+                    "id": "ec1b7488-00cd-41ab-8e9f-adb0bac4f6fa",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "d81947cf-e338-4a45-9b05-7dff6448b093",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mouse",
+                    "action": "Select",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "daa5675d-23bb-4949-8583-778cfd7b8aed",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Unselect",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "483c31a5-44ab-4d8a-97c6-4920dc514524",
+                    "path": "<Mouse>/middleButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Drag",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b6644196-d230-4a95-b8fc-cde295f6e187",
+                    "path": "<Mouse>/scroll",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Scroll",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
             "name": "Camera",
             "id": "b0469837-5996-4bc5-927a-eef931d7c741",
             "actions": [
@@ -13,15 +101,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
-                },
-                {
-                    "name": "Drag",
-                    "type": "Button",
-                    "id": "0e6f01ec-6573-424b-8a52-a8cdbdbd7f57",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 },
                 {
                     "name": "Rotate Left",
@@ -49,15 +128,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "Scroll",
-                    "type": "Value",
-                    "id": "4b3bf5f5-9f3a-43e4-8be2-31476acbac16",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
                 },
                 {
                     "name": "Tilt Down",
@@ -145,17 +215,6 @@
                 },
                 {
                     "name": "",
-                    "id": "9c4fd7ce-f184-4fbf-b9c4-6703707dcf5d",
-                    "path": "<Mouse>/middleButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Mouse",
-                    "action": "Drag",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "195e94ea-1410-45d8-b88b-6f56ad7cccb0",
                     "path": "<Keyboard>/q",
                     "interactions": "",
@@ -189,17 +248,6 @@
                 },
                 {
                     "name": "",
-                    "id": "7e09f2b6-fb07-4241-b5dc-d5acc1daf870",
-                    "path": "<Mouse>/scroll",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Mouse",
-                    "action": "Scroll",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "309983f7-7715-4e48-b63a-b3a2f085dbfe",
                     "path": "<Keyboard>/1",
                     "interactions": "",
@@ -228,6 +276,54 @@
                     "processors": "",
                     "groups": "",
                     "action": "Reset Tilt",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Friend",
+            "id": "9d1088ea-579a-4f4b-9ae3-be8edc839519",
+            "actions": [
+                {
+                    "name": "Select",
+                    "type": "Button",
+                    "id": "203d6205-9a39-4e31-9b88-927440bd736d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Multi Select",
+                    "type": "Button",
+                    "id": "207d0eb3-3da7-4b24-af1e-b2ed29f0ea1a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "a6b54097-6e3d-4c4a-bd6b-dcff0adad264",
+                    "path": "<Keyboard>/shift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard ",
+                    "action": "Multi Select",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8e1221c6-f70e-4e9f-a455-ed6bd3007877",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mouse",
+                    "action": "Select",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

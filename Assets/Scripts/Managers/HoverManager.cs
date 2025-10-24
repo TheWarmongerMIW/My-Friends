@@ -38,5 +38,6 @@ public class HoverManager : MonoBehaviour
             if (currentHover != null) currentHover.OnHoverEnter();
             lastHovered = currentHover;
         }
+        if (currentHover != null) currentHover.OnHoverStay();
     }
 }

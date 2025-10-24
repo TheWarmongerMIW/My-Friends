@@ -5,5 +5,6 @@ using UnityEngine;
 public interface IHoverable
 {
     public void OnHoverEnter();
+    public void OnHoverStay();
     public void OnHoverExit();
 }

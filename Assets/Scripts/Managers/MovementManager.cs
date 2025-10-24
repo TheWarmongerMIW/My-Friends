@@ -25,11 +25,11 @@ public class MovementManager : MonoBehaviour
 
     public void AddToMovementList(FriendMovement friendMovement)
     {
-        friendMovements.Add(friendMovement);    
+        if (!friendMovements.Contains(friendMovement)) friendMovements.Add(friendMovement);    
     }
     public void RemoveFromMovementList(FriendMovement friendMovement)
     {
-        friendMovements.Remove(friendMovement); 
+        if (friendMovements.Contains(friendMovement)) friendMovements.Remove(friendMovement); 
     }
     public void MoveFriend(Vector3 des)
     {
@@ -38,5 +38,13 @@ public class MovementManager : MonoBehaviour
         MovementIndicatorManager.instance.ShowIndicator(des);
         for (int i = 0; i < friendMovements.Count; i++)
             friendMovements[i].Move(des);
+    }
+    public void MoveFriends(Vector3 des)
+    {
+        if (friendMovements.Count == 0) return;
+
+        MovementIndicatorManager.instance.ShowIndicator(des);
+        for (int i = 0; i < friendMovements.Count; i++)
+            friendMovements[i].Move(des);   
     }
 }
