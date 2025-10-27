@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 public class FriendHoldable : MonoBehaviour, IHoldable
 {
     [SerializeField] private GameObject friendMenu;
-    public bool hasActivated;
+    public bool hasMenuActivated;
 
     void Start()
     {
@@ -15,7 +15,7 @@ public class FriendHoldable : MonoBehaviour, IHoldable
     }
     void Update()
     {
-        hasActivated = friendMenu.activeSelf;
+        hasMenuActivated = friendMenu.activeSelf;
     }
 
     public void OnHold()

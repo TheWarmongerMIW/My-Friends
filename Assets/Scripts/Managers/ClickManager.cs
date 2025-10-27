@@ -55,7 +55,7 @@ public class ClickManager : MonoBehaviour
 
             if (((1 << hit.transform.gameObject.layer) & friendLayer) != 0)
             {
-                if (!hit.collider.gameObject.GetComponent<FriendHoldable>().hasActivated)
+                if (!hit.collider.gameObject.GetComponent<FriendHoldable>().hasMenuActivated)
                 {
                     holdTimer += Time.deltaTime;
 
