@@ -11,7 +11,7 @@ public class ClickManager : MonoBehaviour
 
     [Header("General Components")]
     [SerializeField] private Camera mainCamera;
-    [SerializeField] private float holdTimer;
+    //[SerializeField] private float holdTimer;
     [SerializeField] private float holdDuration;
     [SerializeField] private float loadingCursorDelay;
     public bool cursorIsLoading;
@@ -55,26 +55,26 @@ public class ClickManager : MonoBehaviour
 
             if (((1 << hit.transform.gameObject.layer) & friendLayer) != 0)
             {
-                if (!hit.collider.gameObject.GetComponent<FriendHoldable>().hasMenuActivated)
-                {
-                    holdTimer += Time.deltaTime;
+                //if (!hit.collider.gameObject.GetComponent<FriendHoldable>().hasMenuActivated)
+                //{
+                //    holdTimer += Time.deltaTime;
 
-                    if (holdTimer >= loadingCursorDelay && holdTimer < holdDuration)
-                    {
-                        cursorIsLoading = true;
-                        float progress = Mathf.Clamp01(holdTimer / holdDuration);
-                        CursorManager.instance.SetCursorProgress("Loading", progress);
-                    }
+                //    if (holdTimer >= loadingCursorDelay && holdTimer < holdDuration)
+                //    {
+                //        cursorIsLoading = true;
+                //        float progress = Mathf.Clamp01(holdTimer / holdDuration);
+                //        CursorManager.instance.SetCursorProgress("Loading", progress);
+                //    }
 
-                    if (holdTimer >= holdDuration)
-                    {
-                        cursorIsLoading = false;
-                        holdTimer = 0;
+                //    if (holdTimer >= holdDuration)
+                //    {
+                //        cursorIsLoading = false;
+                //        holdTimer = 0;
 
-                        CursorManager.instance.SetCursor("Arrow");
-                        hit.collider.gameObject.GetComponent<FriendHoldable>().OnHold();
-                    }
-                }
+                //        CursorManager.instance.SetCursor("Arrow");
+                //        hit.collider.gameObject.GetComponent<FriendHoldable>().OnHold();
+                //    }
+                //}
 
                 if (inputActionMaps.Friend.MultiSelect.IsPressed()) 
                     FriendSelectionManager.instance.MultiSelect(hit.collider.gameObject);
@@ -86,10 +86,10 @@ public class ClickManager : MonoBehaviour
                 MovementManager.instance.MoveFriend(hit.point);
             }
         }
-        else
-        {
-            holdTimer = 0;
-        }
+        //else
+        //{
+        //    holdTimer = 0;
+        //}
 
         if (inputActionMaps.Cursor.Unselect.WasPressedThisFrame())
         {
