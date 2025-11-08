@@ -9,6 +9,7 @@ public class MovementIndicatorManager : MonoBehaviour
     [Header("General Components")]
     [SerializeField] private GameObject indicatorPrefab;
     [SerializeField] private float indicatorTimer;
+    [SerializeField] private float spawnHeight;
 
     private GameObject currentIndicatorPrefab;
     private Coroutine currentIndicator;
@@ -36,7 +37,7 @@ public class MovementIndicatorManager : MonoBehaviour
     }
     private IEnumerator DisplayIndicatorPrefab(Vector3 des)
     {
-        currentIndicatorPrefab = Instantiate(indicatorPrefab, new Vector3(des.x, 0.01f, des.z), transform.rotation);
+        currentIndicatorPrefab = Instantiate(indicatorPrefab, new Vector3(des.x, spawnHeight, des.z), transform.rotation);
 
         yield return new WaitForSeconds(indicatorTimer);
 
