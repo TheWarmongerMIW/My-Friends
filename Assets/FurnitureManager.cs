@@ -7,7 +7,7 @@ public class FurnitureManager : MonoBehaviour
     public static FurnitureManager instance;
 
     [Header("General Components")]
-    public GameObject furPrefab;
+    [SerializeField] private GameObject newFur;
 
     private void Awake()
     {
@@ -26,16 +26,20 @@ public class FurnitureManager : MonoBehaviour
         
     }
 
-    public void ReplaceFurniture()
+    public void SetNewFurniture(GameObject newFur)
     {
-        GameObject couch = GameObject.Find("Couch");
+        this.newFur = newFur;
+    }
+    public void PurchaseNewFurniture()
+    {
+        GameObject parentObj = GameObject.Find(newFur.tag);
 
         // Destroy current furniture
-        GameObject currentFur = couch.transform.GetChild(0).gameObject;
+        GameObject currentFur = parentObj.transform.GetChild(0).gameObject;
         Destroy(currentFur);
 
-        // Instantiate under the couch immediately
-        GameObject newFur = Instantiate(furPrefab, couch.transform);
-        newFur.transform.SetParent(couch.transform);
+        //Spawn new furniture
+        GameObject chosenFur = Instantiate(newFur, parentObj.transform);
+        chosenFur.transform.SetParent(parentObj.transform);
     }
 }

@@ -1,0 +1,26 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ButtonHover : MonoBehaviour
+{
+    [SerializeField] private GameObject furniture;
+    void Start()
+    {
+     
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+    }
+
+    public void SetNewFurniture()
+    {
+        FurnitureManager.instance.SetNewFurniture(furniture);
+    }
+    public void PurchaseNewFurniture()
+    {
+        FurnitureManager.instance.PurchaseNewFurniture();
+    }
+}
