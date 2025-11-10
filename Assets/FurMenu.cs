@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ButtonHover : MonoBehaviour
+public class FurMenu: MonoBehaviour
 {
     [SerializeField] private GameObject furniture;
     void Start()
@@ -17,10 +17,10 @@ public class ButtonHover : MonoBehaviour
 
     public void SetNewFurniture()
     {
-        FurnitureManager.instance.SetNewFurniture(furniture);
+        FurManager.instance.SetNewFurniture(furniture);
     }
     public void PurchaseNewFurniture()
     {
-        FurnitureManager.instance.PurchaseNewFurniture();
+        FurManager.instance.PurchaseNewFurniture();
     }
 }
