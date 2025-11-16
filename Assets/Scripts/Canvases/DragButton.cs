@@ -29,20 +29,24 @@ public class DragButton: MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDra
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        Debug.Log("Begin drag");
+        CursorManager.instance.SetCursor("Hand Closed");
     }
     public void OnDrag(PointerEventData eventData)
     {
+        //Drag button
         rectTransform.anchoredPosition += eventData.delta / buttonCanvas.scaleFactor;
+        CursorManager.instance.SetCursor("Hand Closed");
 
+        //Calcualte house drag distance
         Vector3 worldDelta = mainCamera.ScreenToWorldPoint(
             new Vector3(eventData.delta.x, eventData.delta.y, distanceToCamera)) 
             - mainCamera.ScreenToWorldPoint(new Vector3(0, 0, distanceToCamera));
 
+        //Drag house
         house.transform.position += worldDelta;    
     }
     public void OnEndDrag(PointerEventData eventData)
     {
-        Debug.Log("End drag");
+        CursorManager.instance.SetCursor("Hand Open");
     }
 }
