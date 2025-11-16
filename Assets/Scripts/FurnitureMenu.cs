@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FurMenu: MonoBehaviour
+public class FurnitureMenu: MonoBehaviour
 {
     [SerializeField] private GameObject furniture;
     void Start()
@@ -17,10 +17,10 @@ public class FurMenu: MonoBehaviour
 
     public void SetNewFurniture()
     {
-        FurManager.instance.SetNewFurniture(furniture);
+        FurnitureManager.instance.SetNewFurniture(furniture);
     }
     public void PurchaseNewFurniture()
     {
-        FurManager.instance.PurchaseNewFurniture();
+        FurnitureManager.instance.PurchaseNewFurniture();
     }
 }
