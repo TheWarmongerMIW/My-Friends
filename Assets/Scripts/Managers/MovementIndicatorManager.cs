@@ -35,10 +35,13 @@ public class MovementIndicatorManager : MonoBehaviour
         }
         currentIndicator = StartCoroutine(DisplayIndicatorPrefab(des));
     }
+    public void DestroyIndicator()
+    {
+        Destroy(currentIndicatorPrefab);
+    }
     private IEnumerator DisplayIndicatorPrefab(Vector3 des)
     {
-        currentIndicatorPrefab = Instantiate(indicatorPrefab, new Vector3(des.x, spawnHeight, des.z), transform.rotation);
-
+        currentIndicatorPrefab = Instantiate(indicatorPrefab, new Vector3(des.x, des.y + spawnHeight, des.z), transform.rotation);
         yield return new WaitForSeconds(indicatorTimer);
 
         Destroy(currentIndicatorPrefab);

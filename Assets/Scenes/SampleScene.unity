@@ -727,6 +727,7 @@ MonoBehaviour:
   rectTransform: {fileID: 348096637}
   buttonCanvas: {fileID: 710540296}
   house: {fileID: 1693366133}
+  friends: []
   mainCamera: {fileID: 0}
   distanceToCamera: 50
 --- !u!114 &348096642
@@ -2954,7 +2955,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1290289404}
   m_Layer: 0
-  m_Name: Menu Manager
+  m_Name: Menu Managers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3040,7 +3041,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1320959966
 Transform:
   m_ObjectHideFlags: 0
@@ -3257,7 +3258,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1344447847}
   m_Layer: 0
-  m_Name: Cursor
+  m_Name: Cursor Mangers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3324,7 +3325,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1462275368}
   m_Layer: 0
-  m_Name: Friends Movement
+  m_Name: Friends Movement Managers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4388,9 +4389,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ff31715d1b52904bab3fa9e884d3405, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentFriends:
-  - {fileID: 919132147849788729}
-  - {fileID: 722669796458154319}
+  friendsRoot: {fileID: 1980532432}
+  currentFriends: []
   selectedFriends: []
 --- !u!1 &2014429146
 GameObject:
@@ -5412,7 +5412,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132148465536127}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
   m_Name: 

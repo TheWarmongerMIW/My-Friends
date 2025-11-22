@@ -55,6 +55,7 @@ public class ClickManager : MonoBehaviour
 
             if (((1 << hit.transform.gameObject.layer) & friendLayer) != 0)
             {
+                #region Legacy
                 //if (!hit.collider.gameObject.GetComponent<FriendHoldable>().hasMenuActivated)
                 //{
                 //    holdTimer += Time.deltaTime;
@@ -75,6 +76,7 @@ public class ClickManager : MonoBehaviour
                 //        hit.collider.gameObject.GetComponent<FriendHoldable>().OnHold();
                 //    }
                 //}
+                #endregion
 
                 if (inputActionMaps.Friend.MultiSelect.IsPressed()) 
                     FriendSelectionManager.instance.MultiSelect(hit.collider.gameObject);
@@ -86,10 +88,12 @@ public class ClickManager : MonoBehaviour
                 MovementManager.instance.MoveFriend(hit.point);
             }
         }
+        #region Legacy
         //else
         //{
         //    holdTimer = 0;
         //}
+        #endregion
 
         if (inputActionMaps.Cursor.Unselect.WasPressedThisFrame())
         {

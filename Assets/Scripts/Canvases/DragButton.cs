@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.EventSystems;
 using UnityEngine.UIElements;
 
@@ -13,6 +14,7 @@ public class DragButton: MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDra
 
     [Header("General Components")]
     [SerializeField] private GameObject house;
+    [SerializeField] private GameObject[] friends;
     [SerializeField] private Camera mainCamera;
     [SerializeField] private float distanceToCamera;
 
@@ -30,6 +32,7 @@ public class DragButton: MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDra
     public void OnBeginDrag(PointerEventData eventData)
     {
         CursorManager.instance.SetCursor("Hand Closed");
+        ControlFriendsNav(false);
     }
     public void OnDrag(PointerEventData eventData)
     {
@@ -43,10 +46,18 @@ public class DragButton: MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDra
             - mainCamera.ScreenToWorldPoint(new Vector3(0, 0, distanceToCamera));
 
         //Drag house
+        ControlFriendsNav(false);
+        MovementIndicatorManager.instance.DestroyIndicator();
         house.transform.position += worldDelta;    
     }
     public void OnEndDrag(PointerEventData eventData)
     {
         CursorManager.instance.SetCursor("Hand Open");
+        ControlFriendsNav(true);
+    }
+    private void ControlFriendsNav(bool value)
+    {
+        foreach (GameObject friend in FriendSelectionManager.instance.GetCurrentFriendsList())
+            friend.GetComponent<NavMeshAgent>().enabled = value;
     }
 }

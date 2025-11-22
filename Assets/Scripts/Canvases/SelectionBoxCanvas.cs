@@ -51,7 +51,7 @@ public class SelectionBoxCanvas : MonoBehaviour
             if (boxVisual.rect.width != 0 || boxVisual.rect.height != 0)
             {
                 FriendSelectionManager.instance.UnselectAllFriends();
-                SelectFriends();
+                //SelectFriends();
             }
 
             endPos = Input.mousePosition;
@@ -63,7 +63,7 @@ public class SelectionBoxCanvas : MonoBehaviour
         //Releasing
         if (inputActionMaps.Cursor.Select.WasReleasedThisFrame())
         {
-            SelectFriends();
+            //SelectFriends();
             CursorModeManager.instance.OnMultiSelectDisable.Invoke();
             CursorModeManager.instance.enableMultiSelect = false;
 
@@ -114,14 +114,17 @@ public class SelectionBoxCanvas : MonoBehaviour
             selectionBox.yMax = Input.mousePosition.y;
         }
     }
-    private void SelectFriends()
-    {
-        foreach (var friend in FriendSelectionManager.instance.currentFriends)
-        {
-            if (selectionBox.Contains(mainCamera.WorldToScreenPoint(friend.transform.position)))
-            {
-                FriendSelectionManager.instance.MultiSelect(friend);
-            }
-        }
-    }
+
+    #region Legacy
+    //private void SelectFriends()
+    //{
+    //    foreach (var friend in FriendSelectionManager.instance.currentFriends)
+    //    {
+    //        if (selectionBox.Contains(mainCamera.WorldToScreenPoint(friend.transform.position)))
+    //        {
+    //            FriendSelectionManager.instance.MultiSelect(friend);
+    //        }
+    //    }
+    //}
+    #endregion
 }

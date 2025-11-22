@@ -7,8 +7,9 @@ public class FriendSelectionManager : MonoBehaviour
     public static FriendSelectionManager instance;
 
     [Header("General Components")]
-    public List<GameObject> currentFriends = new List<GameObject>();
-    public List<GameObject> selectedFriends = new List<GameObject>(); 
+    [SerializeField] private Transform friendsRoot;
+    [SerializeField] private List<GameObject> currentFriends = new List<GameObject>();
+    [SerializeField] private List<GameObject> selectedFriends = new List<GameObject>(); 
 
     private void Awake()
     {
@@ -17,11 +18,23 @@ public class FriendSelectionManager : MonoBehaviour
     }
     void Start()
     {    
+        GetCurrentFriends();    
     }
     void Update()
     {
     }
 
+    public List<GameObject> GetCurrentFriendsList()
+    {
+        return currentFriends;  
+    }
+    public void GetCurrentFriends()
+    {
+        currentFriends.Clear();
+
+        foreach (Transform friend in friendsRoot)
+            currentFriends.Add(friend.gameObject);
+    }
     public void SelectFriend(GameObject friend)
     {
         UnselectAllFriends();
