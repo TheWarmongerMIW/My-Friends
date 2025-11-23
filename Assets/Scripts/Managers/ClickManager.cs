@@ -19,6 +19,7 @@ public class ClickManager : MonoBehaviour
     [Header("Layer Masks")]
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private LayerMask friendLayer;
+    [SerializeField] private LayerMask furnLayer;
     [SerializeField] private LayerMask combinedLayer;
 
     private InputActionMaps inputActionMaps;
@@ -86,6 +87,10 @@ public class ClickManager : MonoBehaviour
             else if (((1 << hit.transform.gameObject.layer) & groundLayer) != 0)
             {
                 MovementManager.instance.MoveFriend(hit.point);
+            }
+            else if (((1 << hit.transform.gameObject.layer) & furnLayer) != 0)
+            {
+                MovementManager.instance.MoveToFurn(hit.point);
             }
         }
         #region Legacy

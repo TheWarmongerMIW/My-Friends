@@ -28,6 +28,10 @@ public class FriendSelectionManager : MonoBehaviour
     {
         return currentFriends;  
     }
+    public List<GameObject> GetSelectedFriendsList()
+    {
+        return selectedFriends;
+    }
     public void GetCurrentFriends()
     {
         currentFriends.Clear();

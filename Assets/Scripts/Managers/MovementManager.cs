@@ -39,6 +39,16 @@ public class MovementManager : MonoBehaviour
         for (int i = 0; i < friendMovements.Count; i++)
             friendMovements[i].Move(des);
     }
+    public void MoveToFurn(Vector3 des)
+    {
+        if (friendMovements.Count == 0) return;
+
+        for (int i = 0; i < friendMovements.Count; i++)
+        {
+            friendMovements[i].Move(des);
+            friendMovements[i].MoveToFurn();
+        }
+    }
     //public void MoveFriends(Vector3 des)
     //{
     //    if (friendMovements.Count == 0) return;

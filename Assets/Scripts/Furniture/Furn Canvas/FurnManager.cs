@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FurnitureManager : MonoBehaviour
+public class FurnManager : MonoBehaviour
 {
-    public static FurnitureManager instance;
+    public static FurnManager instance;
 
     [Header("General Components")]
     [SerializeField] private GameObject newFur;

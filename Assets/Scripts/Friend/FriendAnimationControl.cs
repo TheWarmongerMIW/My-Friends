@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class FriendAnimationControl: MonoBehaviour
@@ -19,7 +20,13 @@ public class FriendAnimationControl: MonoBehaviour
         animator = GetComponent<Animator>();
 
         OnSpeedChange += SetSpeed;
+        friendMovement.OnStartJump.AddListener(this.SetJump);
         SetSpeed(0);    
+    }
+
+    private void FriendAnimationControl_OnJump(TriggerEventUnit obj)
+    {
+        throw new NotImplementedException();
     }
 
     // Update is called once per frame
@@ -27,12 +34,17 @@ public class FriendAnimationControl: MonoBehaviour
     {
         WalkingAnim();
     }
-
+    
     private void WalkingAnim()
     {
         OnSpeedChange?.Invoke(friendMovement.CalculateSpeed());
+        friendMovement.MoveToFurn();
     }
-    private void SetSpeed(float speed)
+    public void SetJump()
+    {
+        animator.SetTrigger("Jump");
+    }
+    public void SetSpeed(float speed)
     {
         animator.SetFloat("Velocity", speed);
     }

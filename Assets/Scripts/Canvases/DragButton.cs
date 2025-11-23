@@ -14,7 +14,6 @@ public class DragButton: MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDra
 
     [Header("General Components")]
     [SerializeField] private GameObject house;
-    [SerializeField] private GameObject[] friends;
     [SerializeField] private Camera mainCamera;
     [SerializeField] private float distanceToCamera;
 

@@ -17,10 +17,10 @@ public class FurnitureMenu: MonoBehaviour
 
     public void SetNewFurniture()
     {
-        FurnitureManager.instance.SetNewFurniture(furniture);
+        FurnManager.instance.SetNewFurniture(furniture);
     }
     public void PurchaseNewFurniture()
     {
-        FurnitureManager.instance.PurchaseNewFurniture();
+        FurnManager.instance.PurchaseNewFurniture();
     }
 }

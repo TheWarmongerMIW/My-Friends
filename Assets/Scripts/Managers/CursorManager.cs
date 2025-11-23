@@ -7,6 +7,7 @@ public class CursorManager : MonoBehaviour
     public static CursorManager instance;
 
     [Header("Cursor List")]
+    [SerializeField] private string currentCursor;
     [SerializeField] private CursorList cursorList;
     private Dictionary<string, CursorType> cursorLookup;
 
@@ -28,11 +29,18 @@ public class CursorManager : MonoBehaviour
         
     }
 
+    public string GetCurrentCursor()
+    {
+        return currentCursor;   
+    }
     public void SetCursor(string name)
     {
         if (cursorLookup.TryGetValue(name, out var cursor))
+        {
             Cursor.SetCursor(cursor.cursorTextures[0], cursor.cursorHotspot, CursorMode.Auto);
-        else 
+            currentCursor = name;
+        }
+        else
             Debug.LogWarning($"Cursor '{name}' not found!");
     }
     public IEnumerator ResetCursorToArrow(float delay)
