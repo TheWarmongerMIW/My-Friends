@@ -6160,25 +6160,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1773182908}
     m_Modifications:
-    - target: {fileID: 2517144010092387432, guid: e7236deaae3244a4a8884de8760c3f0d,
-        type: 3}
-      propertyPath: m_CastShadows
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2517144010092387432, guid: e7236deaae3244a4a8884de8760c3f0d,
-        type: 3}
-      propertyPath: m_LightProbeUsage
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3452082005899794300, guid: e7236deaae3244a4a8884de8760c3f0d,
         type: 3}
       propertyPath: m_Name
       value: Bed_01
-      objectReference: {fileID: 0}
-    - target: {fileID: 3980572087587671353, guid: e7236deaae3244a4a8884de8760c3f0d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4338902023866629647, guid: e7236deaae3244a4a8884de8760c3f0d,
         type: 3}
